@@ -1,0 +1,12 @@
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\bin\Debug\net6.0\ModelDatabase.deps.json
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\bin\Debug\net6.0\ModelDatabase.dll
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\bin\Debug\net6.0\ref\ModelDatabase.dll
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\bin\Debug\net6.0\ModelDatabase.pdb
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\obj\Debug\net6.0\ModelDatabase.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\obj\Debug\net6.0\ModelDatabase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\obj\Debug\net6.0\ModelDatabase.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\obj\Debug\net6.0\ModelDatabase.AssemblyInfo.cs
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\obj\Debug\net6.0\ModelDatabase.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\obj\Debug\net6.0\ModelDatabase.dll
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\obj\Debug\net6.0\ref\ModelDatabase.dll
+C:\Users\Admin\Documents\Repos\TestProspecto\TestBackProspecto\ModelDatabase\obj\Debug\net6.0\ModelDatabase.pdb
