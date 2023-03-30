@@ -3,7 +3,7 @@ export interface IgenericRespon<T>{
 }
 
 export interface GenericData<T> {
-  State: number;
-  Messaget: string;
-  Data: T;
+  state: number;
+  message: string;
+  data: T;
 }

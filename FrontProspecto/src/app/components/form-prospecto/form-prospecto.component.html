@@ -69,7 +69,7 @@
     </div>
     <div class="container-file-up">
       <p-fileUpload #fileUpload uploadLabel="Guardar" [customUpload]="true" (uploadHandler)="onUpload($event)"
-            [multiple] = "true" accept=".pdf,.doc,.jpg,.png" [maxFileSize] ="1000000">
+            [multiple] = "true" accept=".pdf,.doc,.docx,.jpg,.png" [maxFileSize] ="1000000">
             <ng-template pTemplate="content">
                 <ul *ngIf="uploadedFiles.length">
                     <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>

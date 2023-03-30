@@ -1,6 +1,6 @@
 export interface IdocumentRespon {
-  Id: string
-  IdProspecto: string
-  NameDocument: string
-  Link: string
+  id: string
+  idProspecto: string
+  nameDocument: string
+  link: string
 }

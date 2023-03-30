@@ -1,4 +1,4 @@
 export interface IstatusRespon {
-  Id: number;
-  NameStatus: string;
+  id: number;
+  nameStatus: string;
 }

@@ -12,5 +12,6 @@ namespace APIProspecto.DTO
         [Required]
         [ValidatorGuid]
         public string? Id { get; set; }
+        public string? Observations { get; set; }
     }
 }

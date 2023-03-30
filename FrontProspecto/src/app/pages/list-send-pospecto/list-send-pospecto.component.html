@@ -1,0 +1,40 @@
+<p-toast position="top-center" key="tc"></p-toast>
+<p-progressBar *ngIf="progress" mode="indeterminate" [style]="{'height': '6px'}"></p-progressBar>
+
+<p-card header="Lista de Prospectos" [style]="{'width': '100%', 'margin-bottom': '2em'}">
+  <p-table [value]="propects" [lazy]="true"
+    (onLazyLoad)="loadPospect($event)"
+    responsiveLayout="scroll"
+    [loading]="progress" >
+
+    <ng-template pTemplate="header">
+      <tr>
+          <th>Nombre</th>
+          <th>Primer Apellido</th>
+          <th>Segundo Apellido</th>
+          <th>Status</th>
+          <th>Acciones</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+      <tr>
+          <td>{{data.nombre}}</td>
+          <td>{{data.primerApellido}}</td>
+          <td>{{data.segundoApellido}}</td>
+          <td>{{data.status.nameStatus}}</td>
+          <td><p-toggleButton
+            (onChange) = "onDetailsProspec(data)"
+            [disabled] = "!changeUpload"
+            onLabel="Detalles"
+            offLabel="Tabrajando......"
+            onIcon="pi pi-check"
+            offIcon="pi pi-spin pi-spinner"
+            [(ngModel)]="changeUpload">
+          </p-toggleButton></td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</p-card>
+
+

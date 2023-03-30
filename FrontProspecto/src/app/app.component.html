@@ -1,2 +1,19 @@
-<p-button label="Submit"></p-button>
-<app-page-add-prospecto></app-page-add-prospecto>
+
+<p-tabView styleClass="tabview-custom" (onChange)="handleChange($event)">
+  <p-tabPanel>
+    <ng-template pTemplate = "header">
+      <i class="pi pi-user-edit"></i>
+      <span>Agregar Prospecto</span>
+  </ng-template>
+  <app-page-add-prospecto></app-page-add-prospecto>
+  </p-tabPanel>
+
+  <p-tabPanel>
+    <ng-template pTemplate = "header">
+      <i class="pi pi-list"></i>
+      <span>Lista de Aprovacion</span>
+  </ng-template>
+  <app-list-send-pospecto *ngIf="active"></app-list-send-pospecto>
+  </p-tabPanel>
+</p-tabView>
+

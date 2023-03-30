@@ -13,7 +13,7 @@ export class ProspectoService {
 
   constructor(private baseService: GenericService) { }
 
-  public GetFullByState(state: number): Promise<IgenericRespon<IprospectoRespon>>{
+  public GetFullByState(state: number): Promise<IgenericRespon<IprospectoRespon[]>>{
     var url = environment.url.prospecto.getFullForStatus;
     return this.baseService.get(url,state);
   }

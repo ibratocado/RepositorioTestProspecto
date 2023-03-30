@@ -1,0 +1,72 @@
+<p-messages></p-messages>
+<p-card [style]="{'width': '600px'}" >
+
+  <p-divider align="center" type="dashed">
+    <h3>Datos Pesonales</h3>
+  </p-divider>
+
+  <div class="container-info">
+    <label >Nombre: {{data.nombre}}</label>
+    <label >Primer apellido: {{data.primerApellido}}</label>
+    <label >Segundo Apellido: {{data.segundoApellido}}</label>
+    <label >Telefono: {{data.telefono}}</label>
+    <label >RFC: {{data.rfc}}</label>
+  </div>
+
+  <p-divider align="center" type="dashed">
+    <h3>Direccion</h3>
+  </p-divider>
+
+  <div class="container-info">
+    <label >Calle: {{data.calle}}</label>
+    <label >Numero: {{data.numero}}</label>
+    <label >Colonia: {{data.Colonia}}</label>
+    <label >Codigo Postal: {{data.codigoPostal}}</label>
+  </div>
+
+  <p-divider align="center" type="dashed">
+    <h3>Documentos</h3>
+  </p-divider>
+
+  <div class="container-info">
+    <label *ngFor="let item of docs">{{item.nameDocument}}</label>
+  </div>
+
+  <div *ngIf="observactionActive" class="container-info" >
+    <form [formGroup]="formData">
+      <span class="p-float-label">
+        <textarea formControlName="observations"
+          id="float-input"
+          rows="5"
+          cols="30"
+          pInputTextarea>
+        </textarea>
+        <label for="float-input">Observaciones</label>
+      </span>
+    </form>
+  </div>
+
+  <ng-template pTemplate="footer" >
+    <div class="template">
+      <p-toggleButton
+      (onChange) = "onAutorize()"
+      [disabled]="!enableAutorize"
+      onLabel="Autorizar"
+      offLabel="Tabrajando......"
+      onIcon="pi pi-check"
+      offIcon="pi pi-spin pi-spinner"
+      [(ngModel)]="changeAutorize">
+    </p-toggleButton>
+    <p-toggleButton
+      (onChange) = "onReject()"
+      [disabled]="!enableReject"
+      onLabel ="Rechazar"
+      offLabel = "Tabrajando....."
+      onIcon="pi pi-times"
+      offIcon="pi pi-spin pi-spinner"
+      [(ngModel)]="changeRejetc">
+    </p-toggleButton>
+    </div>
+  </ng-template>
+
+</p-card>

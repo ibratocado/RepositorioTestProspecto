@@ -1,4 +1,4 @@
 export interface IdocumentRequest {
-  DocumentData: File[]
+  DocumentData: File
   ProspectoId: string
 }

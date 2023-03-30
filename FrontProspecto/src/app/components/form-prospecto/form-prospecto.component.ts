@@ -91,28 +91,31 @@ export class FormProspectoComponent implements OnInit {
 
   private mapDocuments(id: any){
     console.log("Map--> ",id.data);
-    let request: IdocumentRequest;
-    request = id.data;
+
+
     this.uploadedFiles.forEach((item)=>{
-      request.DocumentData.push(item);
+      let request: IdocumentRequest = {
+        ProspectoId: id.data,
+        DocumentData: item
+      };
+      this.documentService.insertByProspecto(request).then((data)=>{
+        this.messageService.add(
+          {key: 'tc',severity: 'success', summary: 'Satisfactorio', detail: data.respon.message});
+        this.cleanForm();
+      }).catch(()=>{
+        this.errorDocument = id;
+        this.erroShow("A ocurrido un erros al agregar los documentos");
+      });
     });
 
-    this.documentService.insertByProspecto(request).then((data)=>{
 
-      this.messageService.add(
-        {key: 'tc',severity: 'success', summary: 'Satisfactorio', detail: data.respon.Data});
-
-      this.cleanForm();
-    }).catch(()=>{
-      this.errorDocument = id;
-      this.erroShow("A ocurrido un erros al gregar los documentos");
-    });
   }
 
 
   public onInsertProspectoAndReset(){
     this.enableUpload = false;
 
+    console.log("Document----> ",this.errorDocument);
     if(this.errorDocument){
       this.mapDocuments(this.errorDocument);
       return;
@@ -122,8 +125,7 @@ export class FormProspectoComponent implements OnInit {
 
     this.prospectoService.Post(model).then((data)=>{
       console.log(data.respon);
-      let id = data.respon;
-      this.mapDocuments(id);
+      this.mapDocuments(data.respon);
     }).catch(()=>{
       this.erroShow("A ocurrido un erros al gregar el prospecto");
     });

@@ -8,6 +8,6 @@ namespace APIProspecto.Service.Interfaces
         Task<ProspectoRespon> GetById(string id);
         Task<Guid> InsertProspecto(ProspectoRequest model);
         Task<bool> GetExistRFC(string RFC);
-        void UpdateStateByProspeto(string id,int state);
+        void UpdateStateByProspeto(ProspestoUpdateStatusRespon request);
     }
 }

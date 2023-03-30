@@ -159,18 +159,22 @@ namespace APIProspecto.Service
             return task;
         }
 
-        public async void UpdateStateByProspeto(string id,int state)
+        public async void UpdateStateByProspeto(ProspestoUpdateStatusRespon request)
         {
             await Task.Factory.StartNew(() => 
             {
-                var exits = ProspectoExist(id);
+                if (request.Id == null)
+                    return;
+
+                var exits = ProspectoExist(request.Id);
                 if(exits)
                 {
                     command.Connection = _contextDB.OpenConection();
                     command.CommandText = "UpdateStateProspecto";
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Id", id);
-                    command.Parameters.AddWithValue("@State", state);
+                    command.Parameters.AddWithValue("@Id", request.Id);
+                    command.Parameters.AddWithValue("@State", request.Status);
+                    command.Parameters.AddWithValue("@Obs", request.Observations);
                     command.ExecuteNonQuery();
                     command.Parameters.Clear();
                     command.Connection = _contextDB.CloseConection();

@@ -12,7 +12,7 @@ export class DocumentsService {
 
   constructor(private baseService: GenericService) { }
 
-  public getByProspecto(id: string): Promise<IgenericRespon<IdocumentRespon>>{
+  public getByProspecto(id: string): Promise<IgenericRespon<IdocumentRespon[]>>{
     let url = environment.url.document;
     return this.baseService.get(url,id);
   }
@@ -20,8 +20,9 @@ export class DocumentsService {
   public insertByProspecto(request: IdocumentRequest): Promise<IgenericRespon<any>>{
     let url = environment.url.document;
     let fromData = new FormData();
-
+    fromData.append('DocumentData',request.DocumentData);
     fromData.append('ProspectoId',request.ProspectoId);
     return this.baseService.post(url,fromData);
+
   }
 }

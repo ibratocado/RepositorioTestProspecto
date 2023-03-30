@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ddzbTRzeWoN475uav9B9jXfmbBP4RCYMxPzPxIxzjt0=",
+  "Hash": "/O2oHe1jfi+d6w0roZqdgP1cofG4+WPzprgk/BE4ylY=",
   "Source": "APIProspecto",
   "BasePath": "_content/APIProspecto",
   "Mode": "Default",
@@ -10,10 +10,62 @@
     {
       "Name": "APIProspecto\\wwwroot",
       "Source": "APIProspecto",
-      "ContentRoot": "C:\\Users\\Admin\\Documents\\Repos\\TestProspecto\\TestBackProspecto\\APIProspecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\Repos\\RepositorioTestProspecto\\TestBackProspecto\\APIProspecto\\wwwroot\\",
       "BasePath": "_content/APIProspecto",
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Admin\\Documents\\Repos\\RepositorioTestProspecto\\TestBackProspecto\\APIProspecto\\wwwroot\\Archivos\\5651e3ec-786b-4bf8-9cc1-71ea909c43a9.jpg",
+      "SourceId": "APIProspecto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\Repos\\RepositorioTestProspecto\\TestBackProspecto\\APIProspecto\\wwwroot\\",
+      "BasePath": "_content/APIProspecto",
+      "RelativePath": "Archivos/5651e3ec-786b-4bf8-9cc1-71ea909c43a9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Archivos\\5651e3ec-786b-4bf8-9cc1-71ea909c43a9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Documents\\Repos\\RepositorioTestProspecto\\TestBackProspecto\\APIProspecto\\wwwroot\\Archivos\\cbb998b4-4998-4a11-8ecf-4c93f0dafd81.pdf",
+      "SourceId": "APIProspecto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\Repos\\RepositorioTestProspecto\\TestBackProspecto\\APIProspecto\\wwwroot\\",
+      "BasePath": "_content/APIProspecto",
+      "RelativePath": "Archivos/cbb998b4-4998-4a11-8ecf-4c93f0dafd81.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Archivos\\cbb998b4-4998-4a11-8ecf-4c93f0dafd81.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Documents\\Repos\\RepositorioTestProspecto\\TestBackProspecto\\APIProspecto\\wwwroot\\Archivos\\f810688b-15c6-4a6a-96a0-c8c1fe61f74e.pdf",
+      "SourceId": "APIProspecto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\Repos\\RepositorioTestProspecto\\TestBackProspecto\\APIProspecto\\wwwroot\\",
+      "BasePath": "_content/APIProspecto",
+      "RelativePath": "Archivos/f810688b-15c6-4a6a-96a0-c8c1fe61f74e.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Archivos\\f810688b-15c6-4a6a-96a0-c8c1fe61f74e.pdf"
+    }
+  ]
 }

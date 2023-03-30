@@ -97,7 +97,7 @@ namespace APIProspecto.Controllers
         {
             try
             {
-                _prospectoService.UpdateStateByProspeto(request.Id, request.Status);
+                _prospectoService.UpdateStateByProspeto(request);
                 return StatusCode(StatusCodes.Status200OK, new { respon = await _genericRespon.SuccesFull(200, "Actualizado con Exito",null) });
             }
             catch (Exception)

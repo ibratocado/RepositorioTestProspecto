@@ -1,4 +1,5 @@
 export interface IprospectoStatusRequest {
-  Status: number
-  Id: string
+  status: number
+  id: string
+  observations: string
 }

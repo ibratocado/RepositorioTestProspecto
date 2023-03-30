@@ -57,20 +57,16 @@ namespace APIProspecto.Service
             int i = 0;
             var task = await Task<bool>.Factory.StartNew(() => 
             {
-                var respon = true;
-                while(respon && i < request.DocumentData.Count)
-                {
-                    var item = request.DocumentData[i];
-                    var model = DocumentDataAndSave(item);
+                var item = request.DocumentData;
 
-                    if (model == null)
-                        return false;
-                    
-                    model.IdProspecto = request.ProspectoId;
-                    respon = AddDocumentsDB(model);
-                    i++;
-                }
-                return respon;
+                var model = DocumentDataAndSave(item);
+
+                if (model == null)
+                    return false;
+
+                model.IdProspecto = request.ProspectoId;
+           
+                return AddDocumentsDB(model);
             });
 
             if (!task)
