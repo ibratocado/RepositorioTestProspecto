@@ -1,0 +1,90 @@
+<p-toast position="top-center" key="tc"></p-toast>
+<div style="display: flex; justify-content: center;">
+
+  <p-card header="Datos Prospecto" [style]="{'width': '800px'}" >
+
+    <div class = "principal-container">
+      <p-card header="Datos Personales">
+        <form form [formGroup]="formData" class="containerForm">
+          <span class="p-float-label p-input-icon-left">
+
+            <input formControlName="name" type="text" pInputText [ngClass]="{'ng-invalid ng-dirty': validFormDataControl('name')}"/>
+            <label class="labelholder"><i class="pi pi-user"></i>Nombre</label>
+          </span>
+
+          <span class="p-float-label p-input-icon-left">
+
+            <input formControlName="firstLastName" type="text" pInputText [ngClass]="{'ng-invalid ng-dirty': validFormDataControl('firstLastName')}" />
+            <label class="labelholder"><i class="pi pi-user"></i>Primer Apellido</label>
+          </span>
+
+          <span class="p-float-label p-input-icon-left">
+            <input formControlName="secondLastName" type="text" pInputText [ngClass]="{'ng-invalid ng-dirty': validFormDataControl('secondLastName')}"/>
+            <label class="labelholder"><i class="pi pi-user"></i>Segundo Apellido</label>
+          </span>
+
+          <span class="p-float-label p-input-icon-left">
+            <p-inputMask mask="9999999999" formControlName="phone" [ngClass]="{'ng-invalid ng-dirty': validFormDataControl('phone')}"></p-inputMask>
+            <label class="labelholder"><i class="pi pi-phone"></i>Telefono</label>
+          </span>
+
+          <span class="p-float-label p-input-icon-left">
+
+            <p-inputMask mask="aaaa9999999a9" formControlName="rfc" [ngClass]="{'ng-invalid ng-dirty': validFormDataControl('rfc')}"></p-inputMask>
+            <label class="labelholder"><i class="pi pi-key"></i>RFC</label>
+          </span>
+
+        </form>
+      </p-card>
+
+      <p-card header="Direccion">
+        <form [formGroup]="formAddres" class="containerForm">
+          <span class="p-float-label p-input-icon-left">
+
+            <input formControlName="stret" type="text" pInputText [ngClass]="{'ng-invalid ng-dirty': validFormAddresControl('stret')}"/>
+            <label class="labelholder"><i class="pi pi-home"></i>Calle</label>
+          </span>
+
+          <span class="p-float-label p-input-icon-left">
+
+            <p-inputNumber mode="decimal" [useGrouping]="false" formControlName="number" [ngClass]="{'ng-invalid ng-dirty': validFormAddresControl('number')}"></p-inputNumber>
+            <label class="labelholder"><i class="pi pi-hashtag"></i>Numero</label>
+          </span>
+
+          <span class="p-float-label p-input-icon-left">
+            <input formControlName="city" type="text" pInputText [ngClass]="{'ng-invalid ng-dirty': validFormAddresControl('city')}"/>
+            <label class="labelholder"><i class="pi pi-home"></i> Colonia</label>
+          </span>
+
+          <span class="p-float-label p-input-icon-left">
+            <p-inputMask mask="99999"
+              formControlName="postalCode"
+              [ngClass]="{'ng-invalid ng-dirty': validFormAddresControl('postalCode')}">
+            </p-inputMask>
+            <label class="labelholder"><i class="pi pi-envelope"> </i> Codigo Postal</label>
+          </span>
+        </form>
+      </p-card>
+
+    </div>
+    <div class="container-file-up">
+      <p-fileUpload #fileUpload uploadLabel="Guardar" [customUpload]="true" (uploadHandler)="onUpload($event)"
+            [multiple] = "true" accept=".pdf,.doc,.jpg,.png" [maxFileSize] ="1000000">
+            <ng-template pTemplate="content">
+                <ul *ngIf="uploadedFiles.length">
+                    <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                </ul>
+            </ng-template>
+    </p-fileUpload>
+    </div>
+    <p-toggleButton
+      (onChange) = "onInsertProspectoAndReset()"
+      [disabled]="!enableUpload"
+      onLabel="Agregar"
+      offLabel="Tabrajando......"
+      onIcon="pi pi-check"
+      offIcon="pi pi-spin pi-spinner"
+      [(ngModel)]="changeUpload">
+    </p-toggleButton>
+  </p-card>
+</div>

@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ca6a6917-7916-4d18-af28-e1040da9ae6e": {
+      "ProjectGuid": "ca6a6917-7916-4d18-af28-e1040da9ae6e",
+      "DisplayName": "APIProspecto",
+      "ColorIndex": 0
+    },
+    "5dc3b4cd-009f-4c6e-b431-6f1c4636ca29": {
+      "ProjectGuid": "5dc3b4cd-009f-4c6e-b431-6f1c4636ca29",
+      "DisplayName": "ModelDatabase",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

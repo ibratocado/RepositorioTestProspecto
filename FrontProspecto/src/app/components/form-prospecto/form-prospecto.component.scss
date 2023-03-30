@@ -1,0 +1,25 @@
+.labelholder{
+  display: flex;
+  gap: 10px;
+}
+
+h2{
+  color: darkcyan;
+}
+.containerForm{
+  display: grid;
+  gap: 2rem;
+}
+.principal-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 80px;
+  justify-content: center;
+}
+.container-file-up{
+  display: block;
+  margin-top: 15px;
+  row-gap: 5px;
+  justify-content: center;
+}
+
